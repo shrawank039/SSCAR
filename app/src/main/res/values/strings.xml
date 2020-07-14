@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SS Car Bike</string>
+    <string name="openDrawer">open</string>
+    <string name="closeDrawer">close</string>
+    <string name="web_client_id">298132968938-krhik3ba7mf7q2stt1pkbrsotjto04n6.apps.googleusercontent.com </string>
+    <string name="facebook_app_id">2077117899242297</string>
+    <string name="facebook_appsecret_key">5a4ad16350f50bf3bde7e4829f3f59ed</string>
+    <string name="fb_login_protocol_scheme">fb2077117899242297</string>
+    <string name="terms">Please read the terms and conditions carefully before registering, accessing or using the Services (defined below). The terms and conditions is a legal contract (\"Agreement) between You and FX Mart Private Limited (FX Mart) having its registered office at A 25, Mohan Cooperative Industrial Area New Delhi, South Delhi - 110044, India. You agree and acknowledge that you have read the terms and conditions net forth below. If you do not agree to these terms and conditions or do not wish to be bound by these terms and conditions, you may not use the Services and/or immediately terminate the Services.  We may amend the terms and conditions at any time by posting an updated version at www.phonepe.com (\'PhonePe Site\'). The updated version of the Terms of Service shall take effect immediately upon posting. If you use our Services, you will be bound by this Agreement which may be amended from time to time.</string>
+    <string name="tos">All the Services are offered by FX Mart under the brand name \"PhonePe\'\'. The terms \'FX Mart\' and \'PhonePe\' have been used</string>
+    <string name="policy">PhonePe is an application (hereinafter referred to as an WO developed by FX Mart Private Limited, a company incorported under the Companies Act, 1956 with its registered office at A 25, Mohan Cooperative Industrial Area New Delhi, South Delhi -110044, India. we value the trust you place in us. That\'s why we insist upon the highest standards for secure transactions and customer information privacy. Please read the following statement to learn about our information gathering and dissemination practices.\n\n  <b>Note:</b>\n\n  Our privacy policy is subject to change at any time without notice. Though every effort would be made to keep you informed of the changes, if any, to the policy, you are kindly advised to review the policy periodically.\n\n  By downloading this app you agree to be bound by the terms and conditions of this Privacy Policy. As this policy enables us to provide you a secure and a wholesome experience, we will not be able to register you, if you are not in agreement with these terms.\n\nBy mere use of the app, you expressly consent to our use and disclosure of your personal information in accordance with this Privacy Policy. This Privacy Policy is incorporated into and</string>
+    <string name="about_text">welcome to SS Car Bike. my name is sitaram swami. my home twon from Didwana. currently based in jaipur and has been staying for 15 years now started this work in 2009. And today it is being seen in the whole world. And this is just following 3 million plus customer.</string>
+
+    <string name="activity_name_Invite">Invite &amp; Discount</string>
+
+    <string name="fulname">Full Name</string>
+    <string name="email">Email Address</string>
+    <string name="contact_no">Contact No</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="current_location">Current Location</string>
+    <string name="car_name">Car &amp; Bike Name</string>
+    <string name="message">Message</string>
+    <string name="online_secondhand_store">ONLINE SECOND HAND </string>
+
+    <string name="Rs">\u20B9</string>
+
+</resources>

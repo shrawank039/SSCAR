@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="CustomTheme">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="CustomTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+    </style>
+
+    <style name="buttonFB" parent="CustomTheme">
+        <item name="colorButtonNormal">@color/fb_color</item>
+    </style>
+    <style name="buttongoogle" parent="CustomTheme">
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+    <style name="progress" parent="CustomTheme">
+        <item name="colorAccent">@color/black_600</item>
+    </style>
+</resources>

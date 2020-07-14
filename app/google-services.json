@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "298132968938",
+    "firebase_url": "https://ss-car.firebaseio.com",
+    "project_id": "ss-car",
+    "storage_bucket": "ss-car.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298132968938:android:f79739856dfedbea",
+        "android_client_info": {
+          "package_name": "com.app.sitaramswami"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298132968938-7ct1h1vpo7svn51fnaifckcctt3sqfj9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.sitaramswami",
+            "certificate_hash": "42a6aab73504e9bf217d9b4b6dbdee6f67a9b27f"
+          }
+        },
+        {
+          "client_id": "298132968938-ovlhf2rds24qc8fvjne9en6coov7upck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.sitaramswami",
+            "certificate_hash": "aab1b54c1863654c37e63dede387d39c4480be27"
+          }
+        },
+        {
+          "client_id": "298132968938-krhik3ba7mf7q2stt1pkbrsotjto04n6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtpgzTEmGXYlKN-KXeLDgh4vjnIwuYMFw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298132968938-krhik3ba7mf7q2stt1pkbrsotjto04n6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

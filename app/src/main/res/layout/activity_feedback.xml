@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomePage">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_10">
+
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding_10"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="@dimen/margin_5"
+                    card_view:cardElevation="@dimen/padding_3">
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:padding="@dimen/padding_15"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/black_600"
+                        android:textSize="15sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding_10"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="@dimen/margin_5"
+                    card_view:cardElevation="@dimen/padding_3">
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Your Email Address"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/padding_15"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/black_600"
+                        android:textSize="15sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding_10"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="@dimen/margin_5"
+                    card_view:cardElevation="@dimen/padding_3">
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contact No."
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/padding_15"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/black_600"
+                        android:textSize="15sp" />
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding_10"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="@dimen/margin_5"
+                    card_view:cardElevation="@dimen/padding_3">
+
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="Message"
+                        android:lines="7"
+                        android:maxLines="9"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/padding_15"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/black_600"
+                        android:textSize="15sp" />
+
+
+                </android.support.v7.widget.CardView>
+
+
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:elevation="@dimen/padding_3"
+                        android:padding="@dimen/padding_15"
+                        android:layout_margin="@dimen/padding_10"
+                        android:text="Submit"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                layout="@layout/add_layout" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
+

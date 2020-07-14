@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <group
+        android:id="@+id/group_items"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/news"
+            android:icon="@drawable/newspaper"
+            android:title="News"
+
+           />
+        <item
+            android:id="@+id/car_bike"
+            app:actionLayout="@layout/view_new"
+            android:icon="@drawable/car"
+            android:title="Need Car &amp; Bike" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/information"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/contact"
+            android:icon="@drawable/phone_in_talk"
+            android:title="Contact Us" />
+
+
+        <item
+            android:id="@+id/website"
+            android:icon="@drawable/web_box"
+            android:title="Visit Website" />
+
+        <item
+            android:id="@+id/career"
+            android:icon="@drawable/account_tie"
+            android:title="Careers" />
+
+        <item
+            android:id="@+id/advertise"
+            android:icon="@drawable/brightness_auto"
+            app:actionLayout="@layout/view_new"
+            android:title="Advertise With Us" />
+
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/message_text"
+            android:title="Help &amp; Feedback" />
+    </group>
+    <!-- <item
+         android:id="@+id/social_network"
+         android:icon="@drawable/ic_social"
+         android:title="Social Network" />-->
+    <!-- <item
+         android:id="@+id/admin"
+         android:icon="@drawable/ic_home"
+         android:title="Admin App" />-->
+    <!--<group-->
+        <!--android:id="@+id/group_items2"-->
+        <!--android:checkableBehavior="single">-->
+        <!--<item-->
+            <!--android:id="@+id/touch"-->
+            <!--android:icon="@drawable/email"-->
+            <!--android:title="Get In Touch" />-->
+
+
+        <!--<item-->
+            <!--android:id="@+id/facebook"-->
+            <!--android:icon="@drawable/facebook_box"-->
+            <!--android:title="Follow On Facebook" />-->
+
+
+        <!--<item-->
+            <!--android:id="@+id/twitter"-->
+            <!--android:icon="@drawable/twitter_box"-->
+            <!--android:title="Follow On Twitter" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/google"-->
+            <!--android:icon="@drawable/google_plus_box"-->
+            <!--android:title="Follow On Google" />-->
+
+
+        <!--<item-->
+            <!--android:id="@+id/pinterest"-->
+            <!--android:icon="@drawable/pinterest"-->
+            <!--android:title="Follow On Pinterst" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/linkdn"-->
+            <!--android:icon="@drawable/linkedin_box"-->
+            <!--android:title="Follow On Linkdin" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/blog"-->
+            <!--android:icon="@drawable/blogger"-->
+            <!--android:title="Follow On Blogger" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/flickr"-->
+            <!--android:icon="@drawable/flickr"-->
+            <!--android:title="Follow On Flickr" />-->
+        <!--<item-->
+            <!--android:id="@+id/instagrm"-->
+            <!--android:icon="@drawable/instagram"-->
+            <!--android:title="Follow On Instagram" />-->
+        <!--<item-->
+            <!--android:id="@+id/behanc"-->
+            <!--android:icon="@drawable/behance"-->
+            <!--android:title="Follow On Behance" />-->
+    <!--</group>-->
+    <group
+        android:id="@+id/group_items3"
+        android:checkableBehavior="single">
+
+
+
+        <item
+            android:id="@+id/invite"
+            android:icon="@drawable/share_variant"
+
+            android:title="Invite &amp; Discount" />
+
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/star"
+            android:title="Rate This App" />
+
+
+        <item
+            android:id="@+id/terms"
+            android:icon="@drawable/file_account"
+            android:title="Terms &amp; Condition" />
+
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/security_account"
+            android:title="Privacy Policy" />
+    </group>
+    <group
+        android:id="@+id/group_items4"
+        android:checkableBehavior="single">
+
+
+        <item
+            android:visible="false"
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+</menu>
