@@ -30,7 +30,7 @@ import android.view.inputmethod.EditorInfo
 import java.util.*
 
 
-class MyShop : BaseActivity(), RetrofitListener, NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+class MyShop : HomeBaseActivity(), RetrofitListener, NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     var filterdNames: ArrayList<ShopListResponse> = ArrayList()
 
 

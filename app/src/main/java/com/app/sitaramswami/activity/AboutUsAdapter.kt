@@ -46,28 +46,28 @@ class AboutUsAdapter(lists: ArrayList<String>) : RecyclerView.Adapter<AboutUsAda
 
         var sessionManager: SessionManager
 //            Log.d("Image", shopListResponse.images[0])
-        sessionManager = SessionManager(holder.adviewabt.context)
-        if (sessionManager.getIds() != null) {
-            var mobileAdId = sessionManager.getIds()!!.mobile_add_id
-
-            Log.d("mobileId", mobileAdId)
-            MobileAds.initialize(holder.adviewabt.context, mobileAdId)
-            val adView = AdView(holder.adviewabt.context)
-            adView.adSize = AdSize.BANNER
-            adView.adUnitId = mobileAdId
-            holder.adviewabt.addView(adView);
-            if (adView != null) {
-                val adRequest = AdRequest.Builder().build()
-                adView.loadAd(adRequest)
-
-            }
-        }
+     //   sessionManager = SessionManager(holder.adviewabt.context)
+//        if (sessionManager.getIds() != null) {
+//            var mobileAdId = sessionManager.getIds()!!.mobile_add_id
+//
+//            Log.d("mobileId", mobileAdId)
+//            MobileAds.initialize(holder.adviewabt.context, mobileAdId)
+//            val adView = AdView(holder.adviewabt.context)
+//            adView.adSize = AdSize.BANNER
+//            adView.adUnitId = mobileAdId
+//            holder.adviewabt.addView(adView);
+//            if (adView != null) {
+//                val adRequest = AdRequest.Builder().build()
+//                adView.loadAd(adRequest)
+//
+//            }
+//        }
 
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var exp = view.about_exp
-        var adviewabt=view.adviewabout
+       // var adviewabt=view.adviewabout
     }
 
 //    private inner class CustomWebViewClient : WebViewClient() {

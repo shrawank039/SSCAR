@@ -1,20 +1,22 @@
 package com.app.sitaramswami.activity
 
 import android.os.Bundle
-import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.View
 import com.app.sitaramswami.SessionManager
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.add_layout.*
+import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 
 
 /**
  * Created by kartik on 21-May-18.
  */
-abstract class BaseActivity : AppCompatActivity() {
+abstract class HomeBaseActivity : AppCompatActivity() {
 
-    private lateinit var mInterstitialAd: InterstitialAd
+   // private lateinit var mInterstitialAd: InterstitialAd
     abstract fun getLayoutId(): Int
     lateinit var sessionManager: SessionManager
 
@@ -33,22 +35,17 @@ abstract class BaseActivity : AppCompatActivity() {
 //          var mobileAdId ="ca-app-pub-6981915153700667/1851684948"
 
 
-            mInterstitialAd = InterstitialAd(this)
-            mInterstitialAd.adUnitId = addId
-            mInterstitialAd.loadAd(AdRequest.Builder().build())
-
-            mInterstitialAd.adListener = object : AdListener() {
-                override fun onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-
-                        val handler = Handler()
-                        handler.postDelayed(Runnable { // Do something after 5s = 5000ms
-                            mInterstitialAd.show();
-                        }, 3000)
-
-                    }
-                }
-            }
+//            mInterstitialAd = InterstitialAd(this)
+//            mInterstitialAd.adUnitId = addId
+//            mInterstitialAd.loadAd(AdRequest.Builder().build())
+//
+//            mInterstitialAd.adListener = object : AdListener() {
+//                override fun onAdLoaded() {
+//                    if (mInterstitialAd.isLoaded()) {
+//                       // mInterstitialAd.show();
+//                    }
+//                }
+//            }
 
             MobileAds.initialize(this, mobileAdId)
             val adview = AdView(this)

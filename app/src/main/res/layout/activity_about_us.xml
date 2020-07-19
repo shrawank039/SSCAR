@@ -92,10 +92,6 @@
                             android:id="@+id/tv_about"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-
-
-
                            />
 
                         <View
@@ -204,17 +200,17 @@
                         android:layout_marginTop="@dimen/margin_10"
                         android:orientation="vertical">
 
-                        <LinearLayout
-                            xmlns:android="http://schemas.android.com/apk/res/android"
-                            android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
-                            android:id="@+id/adviewaboutus"
-                            android:orientation="vertical"
-                            android:background="@color/white"
-                            android:layout_marginTop="@dimen/margin_10"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_centerHorizontal="true"
-                            />
+<!--                        <LinearLayout-->
+<!--                            xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:id="@+id/adviewaboutus"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:background="@color/white"-->
+<!--                            android:layout_marginTop="@dimen/margin_10"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            />-->
 
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/exp_list"

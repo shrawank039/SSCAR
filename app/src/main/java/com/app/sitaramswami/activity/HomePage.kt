@@ -30,7 +30,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 
 
-class HomePage : BaseActivity(), NavigationView.OnNavigationItemSelectedListener,  RetrofitListener {
+class HomePage : HomeBaseActivity(), NavigationView.OnNavigationItemSelectedListener,  RetrofitListener {
+
 
     lateinit var mAuth: FirebaseAuth;
     override fun getLayoutId(): Int {
@@ -41,10 +42,10 @@ class HomePage : BaseActivity(), NavigationView.OnNavigationItemSelectedListener
 
         sessionManager = SessionManager(this)
 
-        if (sessionManager.getUser() == null) {
-            startActivity(CommonUtil.createIntent(this, Login::class.java, true))
-            finish()
-        }
+//        if (sessionManager.getUser() == null) {
+//            startActivity(CommonUtil.createIntent(this, Login::class.java, true))
+//            finish()
+//        }
         toolbar.title = "Home"
         setSupportActionBar(toolbar)
         var drawertoggel = ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.openDrawer, R.string.closeDrawer)

@@ -59,7 +59,7 @@ class AboutUs : BaseActivity(),View.OnClickListener, RetrofitListener  {
             val adView = AdView(this)
             adView.adSize = AdSize.BANNER
             adView.adUnitId = mobileAdId
-           adviewaboutus.addView(adView);
+          // adviewaboutus.addView(adView);
             if (adView != null) {
                 val adRequest = AdRequest.Builder().build()
                 adView.loadAd(adRequest)
