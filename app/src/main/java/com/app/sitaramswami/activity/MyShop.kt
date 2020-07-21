@@ -1,32 +1,32 @@
 package com.app.sitaramswami.activity
 
+
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
+import androidx.core.content.ContextCompat
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
-import android.widget.TextView
+import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import com.app.sitaramswami.*
 import com.app.sitaramswami.apiservice.RequestCall
 import com.app.sitaramswami.interfaces.RetrofitListener
-
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.google.gson.Gson
 import com.google.gson.JsonElement
-
-
 import kotlinx.android.synthetic.main.activity_my_shop.*
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.*
-import android.view.inputmethod.EditorInfo
 import java.util.*
 
 
@@ -97,7 +97,21 @@ class MyShop : HomeBaseActivity(), RetrofitListener, NavigationView.OnNavigation
 
         btn_bike.setOnClickListener(this)
         btn_car.setOnClickListener(this)
-    }
+
+        val imageList = ArrayList<SlideModel>() // Create image list
+
+// imageList.add(SlideModel("String Url" or R.drawable)
+// imageList.add(SlideModel("String Url" or R.drawable, "title") You can add title
+
+        imageList.add(SlideModel("http://www.sscarbike.com/app/admin/images/1595165044_4.jpg", ""))
+        imageList.add(SlideModel("http://www.sscarbike.com/app/admin/images/1583987120_5.jpg", ""))
+        imageList.add(SlideModel("http://www.sscarbike.com/app/admin/images/1584626624_6.jpg", ""))
+        imageList.add(SlideModel("http://www.sscarbike.com/app/admin/images/1583999500_7.jpg", ""))
+
+        val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
+        imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
+ }
 
     override fun initialize() {
         toolbar.title = "Home"
@@ -113,8 +127,8 @@ class MyShop : HomeBaseActivity(), RetrofitListener, NavigationView.OnNavigation
 //        }
 
         drawertoggel.syncState()
-        list.itemAnimator = DefaultItemAnimator()
-        list.layoutManager = LinearLayoutManager(this)
+        list.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        list.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         val navigationView = findViewById<View>(R.id.navigation) as NavigationView
         val nav_Menu: Menu = navigationView.getMenu()
 

@@ -1,7 +1,7 @@
 package com.app.sitaramswami.activity
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +17,7 @@ import android.icu.util.ULocale.getCountry
 import android.text.method.TextKeyListener.clear
 import java.util.*
 import android.icu.util.ULocale.getCountry
-import android.support.v4.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat.startActivity
 import android.text.method.TextKeyListener.clear
 import android.widget.Filter
 import android.widget.Filterable
@@ -26,6 +26,7 @@ import android.widget.Toast
 import com.app.sitaramswami.*
 import com.app.sitaramswami.apiservice.RequestCall
 import com.app.sitaramswami.interfaces.RetrofitListener
+import com.bumptech.glide.GenericTransitionOptions.with
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 
@@ -33,7 +34,7 @@ import com.google.gson.JsonElement
 /**
  * Created by kartik on 21-May-18.
  */
-class ShopListAdapter(lists: ArrayList<ShopListResponse>,var context: Context) : RecyclerView.Adapter<ShopListAdapter.ViewHolder>() , Filterable{
+class ShopListAdapter(lists: ArrayList<ShopListResponse>,var context: Context) : androidx.recyclerview.widget.RecyclerView.Adapter<ShopListAdapter.ViewHolder>() , Filterable{
 //private var contex=context
     lateinit var contex: Context
 //    override fun onResponse(response: JsonElement?, fromCalling: Int) {
@@ -109,7 +110,7 @@ class ShopListAdapter(lists: ArrayList<ShopListResponse>,var context: Context) :
     }
 
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    class ViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view){
 
 
         var make = view.make
@@ -152,7 +153,7 @@ class ShopListAdapter(lists: ArrayList<ShopListResponse>,var context: Context) :
             if(shopListResponse.images.size!=0) {
 
 
-                Picasso.with(slider.context).load(shopListResponse.images[0]).fit()
+                Picasso.get().load(shopListResponse.images[0]).fit()
                         .placeholder(R.drawable.car)
                         .error(R.drawable.car)
                         .into(slider);

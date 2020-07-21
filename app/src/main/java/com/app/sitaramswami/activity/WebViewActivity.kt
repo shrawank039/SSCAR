@@ -1,6 +1,6 @@
 package com.app.sitaramswami.activity
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebSettings
@@ -14,8 +14,8 @@ class WebViewActivity : BaseActivity() {
     }
 
     override fun initialize() {
-        var title = intent.extras.getString("title", "")
-        var url = intent.extras.getString("url", "")
+        var title = intent.extras?.getString("title", "")
+        var url = intent.extras?.getString("url", "")
         toolbar.title = title
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)

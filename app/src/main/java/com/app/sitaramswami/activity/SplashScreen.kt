@@ -1,7 +1,7 @@
 package com.app.sitaramswami.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -27,7 +27,7 @@ class SplashScreen : AppCompatActivity(), RetrofitListener {
                 finish()
             }
             else {
-                val intent = Intent(applicationContext, Login::class.java)
+                val intent = Intent(applicationContext, MyShop::class.java) // login
                 startActivity(intent)
                 finish()
             }

@@ -1,9 +1,9 @@
 package com.app.sitaramswami.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.text.Html
 import android.util.Log
 import android.view.MenuItem
@@ -33,7 +33,7 @@ class AboutUs : BaseActivity(),View.OnClickListener, RetrofitListener  {
     override fun initialize() {
         toolbar.title = "About Us"
         setSupportActionBar(toolbar)
-        exp_list.layoutManager = LinearLayoutManager(this)
+        exp_list.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         sessionManager = SessionManager(this)
         RequestCall().get(Constants.ABOUT_IMAGES, this, 1)
         RequestCall().get(Constants.ABOUT_TEXT, this, 2)

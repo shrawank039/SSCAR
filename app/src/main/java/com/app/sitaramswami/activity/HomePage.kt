@@ -3,12 +3,12 @@ package com.app.sitaramswami.activity
 import android.content.Intent
 import android.graphics.Typeface
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.GridLayoutManager
+import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.GridLayoutManager
 import android.util.Log
 import android.view.Gravity
 import android.view.MenuItem
@@ -24,8 +24,8 @@ import com.google.gson.Gson
 import com.google.gson.JsonElement
 import kotlinx.android.synthetic.main.activity_home_page.*
 import kotlinx.android.synthetic.main.add_layout.*
-import android.support.v4.view.MenuItemCompat
-import android.support.v7.widget.LinearLayoutManager
+import androidx.core.view.MenuItemCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -51,8 +51,8 @@ class HomePage : HomeBaseActivity(), NavigationView.OnNavigationItemSelectedList
         var drawertoggel = ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.openDrawer, R.string.closeDrawer)
 
         drawertoggel.syncState()
-        list1.itemAnimator = DefaultItemAnimator()
-        list1.layoutManager = LinearLayoutManager(this)
+        list1.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        list1.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
          progressBar.visibility=View.VISIBLE
        // RequestCall().get(Constants.SHOP_LIST, this, 1)
 
@@ -70,8 +70,8 @@ class HomePage : HomeBaseActivity(), NavigationView.OnNavigationItemSelectedList
 //        shopicon.text="New"
 
 
-        list1.itemAnimator = DefaultItemAnimator()
-        list1.layoutManager = GridLayoutManager(this, 2)
+        list1.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        list1.layoutManager = androidx.recyclerview.widget.GridLayoutManager(this, 2)
         mAuth = FirebaseAuth.getInstance();
         //  adapter = MenuAdapter()
         //list.adapter = adapter

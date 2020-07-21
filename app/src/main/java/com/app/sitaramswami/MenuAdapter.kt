@@ -2,8 +2,8 @@ package com.app.sitaramswami
 
 import android.content.Intent
 import android.graphics.Color
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.RecyclerView
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ import com.app.sitaramswami.component.PlateWidget
 /**
  * Created by kartik on 06-May-18.
  */
-class MenuAdapter : RecyclerView.Adapter<MenuAdapter.ViewHolder>() {
+class MenuAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<MenuAdapter.ViewHolder>() {
     var size = 4
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
@@ -30,7 +30,7 @@ class MenuAdapter : RecyclerView.Adapter<MenuAdapter.ViewHolder>() {
     }
 
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         var names = arrayOf("About", "My Shop", "Need Car & Bike", "Profile & Contact")
                 var icons = intArrayOf(R.drawable.account,
                 R.drawable.store,

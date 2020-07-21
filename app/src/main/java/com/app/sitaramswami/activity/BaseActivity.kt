@@ -2,7 +2,7 @@ package com.app.sitaramswami.activity
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.app.sitaramswami.SessionManager
 import com.google.android.gms.ads.*

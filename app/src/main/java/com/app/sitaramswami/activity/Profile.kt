@@ -3,7 +3,7 @@ package com.app.sitaramswami.activity
 import android.content.Intent
 import android.net.Uri
 
-import android.support.design.widget.AppBarLayout
+import com.google.android.material.appbar.AppBarLayout
 import android.view.MenuItem
 import android.view.View
 import com.app.sitaramswami.CommonUtil

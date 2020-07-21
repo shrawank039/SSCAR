@@ -1,6 +1,6 @@
 package com.app.sitaramswami.activity
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -15,7 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
-import android.support.annotation.NonNull
+import androidx.annotation.NonNull
 import android.util.Log
 import com.app.sitaramswami.R
 import com.facebook.*
@@ -51,7 +51,7 @@ class Login : AppCompatActivity(), View.OnClickListener, RetrofitListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
+       // AppEventsLogger.activateApp(this);
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
@@ -156,7 +156,7 @@ class Login : AppCompatActivity(), View.OnClickListener, RetrofitListener {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == RC_SIGN_IN) {
@@ -165,7 +165,9 @@ class Login : AppCompatActivity(), View.OnClickListener, RetrofitListener {
             try {
 
                 val account = task.getResult(ApiException::class.java)
-                firebaseAuthWithGoogle(account)
+                if (account != null) {
+                    firebaseAuthWithGoogle(account)
+                }
             } catch (e: ApiException) {
                 Toast.makeText(this, "Google sign in failed", Toast.LENGTH_SHORT).show()
             }

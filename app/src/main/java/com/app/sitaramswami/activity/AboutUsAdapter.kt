@@ -1,6 +1,6 @@
 package com.app.sitaramswami.activity
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 
 import android.view.LayoutInflater
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.about_us.view.*
 /**
  * Created by kartik on 21-May-18.
  */
-class AboutUsAdapter(lists: ArrayList<String>) : RecyclerView.Adapter<AboutUsAdapter.ViewHolder>() {
+class AboutUsAdapter(lists: ArrayList<String>) : androidx.recyclerview.widget.RecyclerView.Adapter<AboutUsAdapter.ViewHolder>() {
     var aboutList = lists
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -65,7 +65,7 @@ class AboutUsAdapter(lists: ArrayList<String>) : RecyclerView.Adapter<AboutUsAda
 
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         var exp = view.about_exp
        // var adviewabt=view.adviewabout
     }

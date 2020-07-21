@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.app.sitaramswami">
 
     <supports-screens
@@ -18,8 +19,11 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activity.ImageDetail"></activity>
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="m">
+
+        <activity android:name=".activity.ImageDetail"/>
         <activity android:name=".activity.ProductDetail" />
         <activity
             android:name=".activity.SplashScreen"
