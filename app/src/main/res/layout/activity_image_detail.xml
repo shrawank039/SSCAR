@@ -3,19 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/banner"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/margin_5"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@color/white"
-    android:gravity="center"
-    android:paddingLeft="@dimen/margin_10"
-    android:paddingRight="@dimen/margin_10"
-    >
+    android:gravity="center">
+
     <com.app.sitaramswami.component.Slider1
         android:id="@+id/slider1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_200"
+        android:layout_height="wrap_content"
         />
 
 </LinearLayout>

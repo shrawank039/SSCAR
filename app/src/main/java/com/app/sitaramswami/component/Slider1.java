@@ -131,9 +131,9 @@ public class Slider1 extends LinearLayout implements ViewPager.OnPageChangeListe
             ImageView imageView = new ImageView(getContext());
             PhotoViewAttacher pAttacher;
 
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             imageView.setLayoutParams(params);
-            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
             pAttacher = new PhotoViewAttacher(imageView);
             pAttacher.update();
           Glide.with(getContext().getApplicationContext()).load(sliderImages.get(position)).into(imageView);
@@ -141,7 +141,7 @@ public class Slider1 extends LinearLayout implements ViewPager.OnPageChangeListe
 //                    .placeholder(R.drawable.car)
 //                    .error(R.drawable.car)
 //                    .into(imageView);
-            container.addView(imageView,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+            container.addView(imageView,LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             return imageView;
         }
 

@@ -18,8 +18,8 @@ android {
         applicationId "com.app.sitaramswami"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 14
-        versionName "14.0"
+        versionCode 16
+        versionName "0.15.1"
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         signingConfig signingConfigs.config
