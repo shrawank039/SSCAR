@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SSCAR.iml" filepath="$PROJECT_DIR$/.idea/modules/SSCAR.iml" group="SSCAR" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SSCAR-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SSCAR-app.iml" group="SSCAR/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudioProjects-SSCAR.iml" filepath="$PROJECT_DIR$/.idea/modules/StudioProjects-SSCAR.iml" group="SSCAR" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="SSCAR/app" />
     </modules>
   </component>

@@ -5,25 +5,21 @@
     android:background="#D3D3D3"
     android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        >
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/productadView"
+        <RelativeLayout
+            android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/white"
-            android:orientation="vertical" />
+            android:layout_gravity="center"
+            android:gravity="center">
 
-
-    </LinearLayout>
+            <include
+                layout="@layout/add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
 
 
     <androidx.core.widget.NestedScrollView

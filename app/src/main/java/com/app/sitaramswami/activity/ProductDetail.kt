@@ -29,9 +29,51 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class ProductDetail : AppCompatActivity(), RetrofitListener {
+class ProductDetail : BaseActivity() , RetrofitListener {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_product_detail
+    }
 
-    lateinit var sessionManager: SessionManager
+    override fun initialize() {
+
+        progressBar.visibility=View.VISIBLE
+        sessionManager = SessionManager(this)
+        if (sessionManager.getUser() != null) {
+            user_id = SessionManager(this).getUser()!!.id.toString()
+            Log.d("Id",user_id)
+            product_id = intent.getStringExtra("Id")
+            var data = ProductId(product_id, user_id)
+            var productId = Gson().toJsonTree(data)
+
+            RequestCall().post(Constants.ProductDatails, productId, this, 1)
+        }
+        else{
+
+            product_id = intent.getStringExtra("Id")
+            var data = Product(product_id)
+            var productId = Gson().toJsonTree(data)
+
+            RequestCall().post(Constants.ProductDatails, productId, this, 1)
+        }
+
+        if (sessionManager.getIds() != null) {
+            var mobileAdId = sessionManager.getIds()!!.mobile_add_id
+            //  var mobileAdId = "ca-app-pub-6981915153700667/2441931636"
+            Log.d("mobileId", mobileAdId)
+            MobileAds.initialize(this, mobileAdId)
+            val adView = AdView(this)
+            adView.adSize = AdSize.BANNER
+            adView.adUnitId = mobileAdId
+          //  productadView.addView(adView);
+            if (adView != null) {
+                val adRequest = AdRequest.Builder().build()
+                adView.loadAd(adRequest)
+
+            }
+        }
+
+    }
+
     lateinit var product_id:String
     lateinit var user_id:String
     override fun onResponse(response: JsonElement?, fromCalling: Int) {
@@ -278,48 +320,6 @@ class ProductDetail : AppCompatActivity(), RetrofitListener {
     }
 
     override fun onError(message: String?, fromCalling: Int) {
-
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.activity_product_detail)
-        progressBar.visibility=View.VISIBLE
-        sessionManager = SessionManager(this)
-        if (sessionManager.getUser() != null) {
-            user_id = SessionManager(this).getUser()!!.id.toString()
-            Log.d("Id",user_id)
-            product_id = intent.getStringExtra("Id")
-            var data = ProductId(product_id, user_id)
-            var productId = Gson().toJsonTree(data)
-
-            RequestCall().post(Constants.ProductDatails, productId, this, 1)
-        }
-        else{
-
-            product_id = intent.getStringExtra("Id")
-            var data = Product(product_id)
-            var productId = Gson().toJsonTree(data)
-
-            RequestCall().post(Constants.ProductDatails, productId, this, 1)
-        }
-
-        if (sessionManager.getIds() != null) {
-            var mobileAdId = sessionManager.getIds()!!.mobile_add_id
-            //  var mobileAdId = "ca-app-pub-6981915153700667/2441931636"
-            Log.d("mobileId", mobileAdId)
-            MobileAds.initialize(this, mobileAdId)
-            val adView = AdView(this)
-            adView.adSize = AdSize.BANNER
-            adView.adUnitId = mobileAdId
-            productadView.addView(adView);
-            if (adView != null) {
-                val adRequest = AdRequest.Builder().build()
-                adView.loadAd(adRequest)
-
-            }
-        }
 
     }
 }

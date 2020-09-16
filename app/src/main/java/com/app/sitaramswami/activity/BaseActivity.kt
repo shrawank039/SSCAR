@@ -44,7 +44,7 @@ abstract class BaseActivity : AppCompatActivity() {
                         val handler = Handler()
                         handler.postDelayed(Runnable { // Do something after 5s = 5000ms
                             mInterstitialAd.show();
-                        }, 3000)
+                        }, 500)
 
                     }
                 }
